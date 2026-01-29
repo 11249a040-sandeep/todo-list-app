@@ -1,0 +1,216 @@
+/* ---------- GENERAL ---------- */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #333;
+}
+
+/* ---------- AUTH PAGE ---------- */
+.auth-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.auth-container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 320px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.auth-container h2 {
+  margin-bottom: 20px;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #6c63ff;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.auth-container button:hover {
+  background: #574fd6;
+}
+
+#authMessage {
+  margin-top: 10px;
+  font-size: 14px;
+  color: red;
+}
+
+/* ---------- DASHBOARD ---------- */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  text-align: center;
+}
+
+.logout-btn {
+  float: right;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #ff4d4d;
+  color: white;
+  cursor: pointer;
+}
+
+/* ---------- TASK INPUT ---------- */
+.task-input {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.task-input input,
+.task-input select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  flex: 1;
+}
+
+.task-input button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #28a745;
+  color: white;
+  cursor: pointer;
+}
+
+.task-input button:hover {
+  background: #218838;
+}
+
+/* ---------- FILTERS ---------- */
+.filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.filters button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.filters input {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  flex: 1;
+}
+
+/* ---------- TASK LIST ---------- */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  background: #f8f9fa;
+  transition: 0.2s;
+}
+
+li:hover {
+  transform: scale(1.01);
+}
+
+/* Priority Colors */
+li.high {
+  border-left: 6px solid #dc3545;
+}
+
+li.medium {
+  border-left: 6px solid #ffc107;
+}
+
+li.low {
+  border-left: 6px solid #28a745;
+}
+
+li span {
+  flex: 1;
+  margin-left: 8px;
+}
+
+li input[type="checkbox"] {
+  transform: scale(1.2);
+}
+
+li button {
+  margin-left: 6px;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+li button:nth-child(3) {
+  background: #17a2b8;
+  color: white;
+}
+
+li button:nth-child(4) {
+  background: #dc3545;
+  color: white;
+}
+
+/* Completed Task */
+li.completed span {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 600px) {
+  .task-input,
+  .filters {
+    flex-direction: column;
+  }
+
+  .logout-btn {
+    float: none;
+    display: block;
+    margin: 10px auto;
+  }
+}
